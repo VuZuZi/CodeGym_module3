@@ -1,3 +1,5 @@
+create database quan_ly_sinh_vien;
+use quan_ly_sinh_vien;
 create table class(
 	Class_id int primary key auto_increment,
 	class_name varchar(60) NOT NULL,
@@ -18,7 +20,7 @@ create table subject(
 	SubName varchar(50) not null,
 	credit tinyint not null DEFAULT 1, check(credit >= 1),
 	status bit DEFAULT 1
-)
+);
 create table mark(
 	MarkID int primary key auto_increment,
 	subID int not null,
